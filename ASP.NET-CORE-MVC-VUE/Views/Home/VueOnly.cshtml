@@ -1,0 +1,19 @@
+﻿
+<h1>Vue Only Example</h1>
+
+
+<div id="app">
+    <button @@click="increment()">Add 1</button>
+    <p>{{model.count}}</p>
+    <h1>{{model.title}}</h1>
+</div>
+
+@{
+    
+    await Html.RenderPartialAsync("_VueJs");
+}
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+@* can use render script section here *@
+<script src="~/vue/VueOnly.js"></script>
